@@ -1,11 +1,11 @@
 import s from './Statistics.module.css';
 
-const Statistics = (title, props) => {
+const Statistics = (options) => {
     return (
         <ul className={s.statisticsList}>
-            <li>Good:</li>
-            <li>Neutral:</li>
-            <li>Bad:</li>
+            <li>Good: {options.good}</li>
+            <li>Neutral: {options.neutral}</li>
+            <li>Bad: {options.bad}</li>
         </ul>
     )
 

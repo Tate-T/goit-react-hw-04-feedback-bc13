@@ -12,8 +12,8 @@ class App extends Component {
     options: []
   }
 
-  clickFeedback = () => {
-
+  onLeaveFeedback = (btn) => {
+    this.setState(prev => { return { [btn]: prev[btn] + 1 } })
   }
 
   // countTotalFeedback = () = > {
@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <>
         <Section title={"Please leave feedback"}>
-          <FeedbackOptions options={this.state.options} clickFeedback={this.clickFeedback} />
+          <FeedbackOptions options={this.state.options} onLeaveFeedback={this.onLeaveFeedback} />
         </Section>
         <Section title={"Statistics"}>
           <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positivePercentage} />

@@ -8,6 +8,7 @@ body {
   background-image: url(./images/feedback.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: 0.5;
 }
 
 code {
