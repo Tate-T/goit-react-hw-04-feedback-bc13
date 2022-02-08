@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ option, clickFeedback }) => {
     return (
-        <div className={s.feedbackBtns}>
+        <>
             {/* {options.map(option => (
                 <button type="button" name={option} key={option} onClick={clickFeedback}>{option}</button>
             ))} */}
 
-            <button type="button" name={option} key={option} onClick={clickFeedback}>Good</button>
-            <button type="button" name={option} key={option} onClick={clickFeedback}>Neutral</button>
-            <button type="button" name={option} key={option} onClick={clickFeedback}>Bad</button>
-        </div>
+            <button type="button" name={option} key={option} onClick={clickFeedback} className={s.btns}>Good</button>
+            <button type="button" name={option} key={option} onClick={clickFeedback} className={s.btns}>Neutral</button>
+            <button type="button" name={option} key={option} onClick={clickFeedback} className={s.btns}>Bad</button>
+        </>
     )
 }
 

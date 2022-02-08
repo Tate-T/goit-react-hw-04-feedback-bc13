@@ -1,3 +1,11 @@
-.feedbackBtns {
-    margin: 0 auto;
+.btns:not(:last-child) {
+    margin-right: 15px;
+}
+
+.btns {
+    color:indigo;
+    border-radius: 10px;
+    background-color: rgb(233, 201, 245);
+    padding: 10px;
+    box-shadow: 2px 2px 2px indigo;
 }
