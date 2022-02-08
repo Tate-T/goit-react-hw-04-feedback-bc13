@@ -12,7 +12,7 @@ class App extends Component {
     options: []
   }
 
-  nameFeedback = () => {
+  clickFeedback = () => {
 
   }
 
@@ -28,8 +28,10 @@ class App extends Component {
     return (
       <>
         <Section title={"Please leave feedback"}>
-          <FeedbackOptions options={this.state.options} countTotalFeedback={this.countTotalFeedback} />
-          <Statistics title={"Statistics"} good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positivePercentage} />
+          <FeedbackOptions options={this.state.options} clickFeedback={this.clickFeedback} />
+        </Section>
+        <Section title={"Statistics"}>
+          <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positivePercentage} />
         </Section>
       </>
     )

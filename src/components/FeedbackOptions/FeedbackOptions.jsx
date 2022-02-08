@@ -1,12 +1,17 @@
+import s from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({ options, nameFeedback }) => {
+const FeedbackOptions = ({ option, clickFeedback }) => {
     return (
-        <>
-            {options.map(option => (
-                <button type="button" key={option} onClick={nameFeedback}>{option}</button>
-            ))}
-        </>
+        <div className={s.feedbackBtns}>
+            {/* {options.map(option => (
+                <button type="button" name={option} key={option} onClick={clickFeedback}>{option}</button>
+            ))} */}
+
+            <button type="button" name={option} key={option} onClick={clickFeedback}>Good</button>
+            <button type="button" name={option} key={option} onClick={clickFeedback}>Neutral</button>
+            <button type="button" name={option} key={option} onClick={clickFeedback}>Bad</button>
+        </div>
     )
 }
 
